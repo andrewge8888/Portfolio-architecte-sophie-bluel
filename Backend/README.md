@@ -31,3 +31,5 @@ npm start
 [Swagger documentation](http://localhost:5678/api-docs/)
 
 To read the documentation, use Chrome or Firefox
+
+Hello World
