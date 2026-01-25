@@ -1,31 +1,33 @@
 # Backend API - Sophie Bluel
 
-Ce dossier contient le code backend du projet
+This folder contains the project's backend code
 
-## Lancement du backend
+## Launching the Backend
 
-Ouvrez un terminal à cet emplacement
+Open a terminal in this location
 
-Pour installer les dépendances du projet, executez la commande 
-```bash 
+To install the project's dependencies, run the command: 
+```bash
 npm install
 ```
 
-Une fois les dépendances installées lancez le projet avec la commande 
-```bash 
+Once the dependencies are installed, launch the project with the command: 
+```bash
 npm start
 ```
 
-**Laisser tourner ce terminal pour travailler**
+**Leave this terminal running while you work**
 
-## Compte de test pour Sophie Bluel
+## Test Account for Sophie Bluel
 
 |email|password|
+
 | :---------------: | :---------------: |
+
 |sophie.bluel@test.tld|S0phie|
 
-## Accéder à Swagger
+## Accessing Swagger
 
-[documentation Swagger](http://localhost:5678/api-docs/)
+[Swagger documentation](http://localhost:5678/api-docs/)
 
-Pour lire la documentation, utiliser Chrome ou Firefox
+To read the documentation, use Chrome or Firefox
