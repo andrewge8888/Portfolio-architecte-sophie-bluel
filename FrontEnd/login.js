@@ -22,8 +22,9 @@ function login() {
 
         const ret = await response.json();
 
-        localStorage.setItem("token", ret.token);
+        console.log("RECEIVED TOKEN: ", ret.token)
 
+        localStorage.setItem("token", ret.token);
 
     });
 }

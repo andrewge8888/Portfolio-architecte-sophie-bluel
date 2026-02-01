@@ -74,7 +74,18 @@ function displayCategories() {
     })
 }
 
+function displayEditMode() {
+	token = localStorage.getItem("token");
+	if (token) {
+		document.querySelector(".edit-bar").classList.remove("hidden");
+		document.querySelector(".edit-button").classList.remove("hidden");
+
+		// make the buttons display the modals
+	}
+}
+
 getData()
+displayEditMode();
 // async function myFunc() {
 
 // }
