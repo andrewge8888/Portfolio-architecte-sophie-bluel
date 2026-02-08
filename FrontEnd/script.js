@@ -17,6 +17,7 @@ async function getData() {
 		console.log(result);
 		displayGallery();
 		displayCategories();
+		displayModalGallery();
 	} catch (error) {
 		console.error(error.message);
 	}
@@ -44,6 +45,18 @@ function displayGallery() {
 		figure.appendChild(figcaption);
         gallery.appendChild(figure);
     })
+}
+
+function displayModalGallery() {
+	const gallery = document.querySelector(".modal-gallery-list");
+	gallery.innerHTML = "";
+
+	projectsList.forEach((project) => {
+		const img = document.createElement("img");
+		img.src = project.imageUrl;
+		img.classList.add("modal-image");
+		gallery.appendChild(img);
+	});
 }
 
 function displayCategories() {
@@ -77,12 +90,31 @@ function displayCategories() {
 function displayEditMode() {
 	token = localStorage.getItem("token");
 	if (token) {
+		const button = document.querySelector(".edit-button");
+		const bar = document.querySelector(".edit-bar");
+		const photo = document.querySelector(".photo-button");
+
 		document.querySelector(".edit-bar").classList.remove("hidden");
 		document.querySelector(".edit-button").classList.remove("hidden");
 
 		// make the buttons display the modals
+		button.addEventListener("click", () => {
+			document.querySelector(".modal").classList.remove("hidden");
+		});
+
+		bar.addEventListener("click", () => {
+			document.querySelector(".modal").classList.remove("hidden");
+		});
+
+		photo.addEventListener("click", () => {
+			console.log("CLICKED PHOTO BUTTON");
+			document.querySelector(".modal-gallery").classList.add("hidden");
+			document.querySelector(".add-photo").classList.remove("hidden");
+		});
 	}
 }
+
+
 
 getData()
 displayEditMode();

@@ -222,5 +222,35 @@ footer nav ul {
 .modal-gallery {
 	display: flex;
 	width: 600px;
+	height: 500px;
+	flex-wrap: wrap;
 	background-color: white;
+		padding: 50px;
+}
+
+.gallery-title {
+	display: flex;
+	justify-content: center;
+	font-family: 'Syne';
+}
+
+.modal-gallery-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.modal-image {
+	margin: 10px;
+	width: 75px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.add-photo {
+	display: flex;
+	width: 600px;
+	height: 500px;
+	background-color: white;
+	padding: 50px;
+	flex-direction: column;
 }
